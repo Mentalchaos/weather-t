@@ -1,5 +1,14 @@
 .AppContainer {
-    background-image: url('./../../assets/imgs/small-memory.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
+
+}
+
+.details {
+    background: #999;
+    height: auto;
+    width: 50%;
+    margin-left: 10em;
+}
+
+.App {
+    display: flex;
 }

@@ -2,11 +2,16 @@ import React from 'react';
 import WeatherLocation from './index.js';
 import './appContainer.css';
 
-const LocationList = () => {
-    const cities = ['Santiago,CL','Tokyo,JP','Helsinki,FI','Vienna,AT','Berlin,DE'];
+const LocationList = ({ cities, handleSelectedLocation }) => {
     return (
         <div className="AppContainer">
-            { cities.map((city,key) => <WeatherLocation city={city} key={key} />)}
+            { cities.map((city,key) => 
+                <WeatherLocation 
+                    handleSelectedLocation={ () => handleSelectedLocation(city) } 
+                    city={city} 
+                    key={key} 
+                />)
+            }
         </div>
     )
 };
