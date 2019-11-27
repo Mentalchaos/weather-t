@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 
 class ForecastExtended extends Component {
     render(){
-        const { city } = this.props;
+        const { city , style } = this.props;
         return (
-            <div>{`Something is happening here in ${city}` }</div>
+            <h1 style={style}>{`Something is happening here in ${city}` }</h1>
         )
     }
 }
