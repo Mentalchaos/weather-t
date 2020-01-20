@@ -14,7 +14,6 @@ class App extends Component {
             city: null
         }
     }
-
     handleSelectedLocation = city => {
         this.setState({
             city
@@ -22,18 +21,12 @@ class App extends Component {
     }
 
     render(){
-        const style = { 
-            textAlign: "center"
-        }
         const { city } = this.state
         return (
             <div className="App">
                 <LocationList cities={cities} handleSelectedLocation={ this.handleSelectedLocation } />
                 <div className="details">
-                    { city ?
-                        <ForecastExtended style={style} city={city} /> :
-                        <h1 style={style}> No se ha seleccionado ninguna ciudad </h1>
-                    }
+                    { city ? <ForecastExtended city={city} /> : <p>No se ha seleccionado una ciudad</p>}
                 </div>
             </div>
         )
